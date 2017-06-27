@@ -1,5 +1,17 @@
 //variables
 $bg-color: #fff; //container background-color;
+$accent-font-color: #FD5200; //accent font color;
+
+//mixins
+
+//position absolute mixin
+@mixin position-absolute ($top: null, $left: null, $right: null, $bottom: null) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
 
 /* COMMON STYLES: YOU DON'T NEED THEM */
 body {
@@ -19,6 +31,26 @@ body {
     font: {
       weight: 400;
       size: 35px;
+    }
+    
+    span {
+      font: {
+        family: 'Josefin Sans', sans-serif;
+      }
+      text-transform: uppercase;
+      color: $accent-font-color;
+      position: relative;
+      
+      &:before {
+        content: "";
+        display: block;
+        @include position-absolute($top: 0, $left: 0, $right: 0);
+        width: 5px;
+        height: 5px;
+        border: 2px solid $accent-font-color;
+        border-radius: 20px;
+        margin: auto;
+      }
     }
   }
 }

@@ -13,3 +13,22 @@ body h1 {
   font-weight: 400;
   font-size: 35px;
 }
+body h1 span {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  color: #FD5200;
+  position: relative;
+}
+body h1 span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  border: 2px solid #FD5200;
+  border-radius: 20px;
+  margin: auto;
+}
