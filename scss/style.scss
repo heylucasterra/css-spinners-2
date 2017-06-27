@@ -1,0 +1,13 @@
+//variables
+$bg-color: #fff; //container background-color;
+
+/* COMMON STYLES: YOU DON'T NEED THEM */
+body {
+  background-color: $bg-color;
+  
+  .container {
+    width: 700px;
+    margin: 70px auto 0px;
+    text-align: center;
+  }
+}
