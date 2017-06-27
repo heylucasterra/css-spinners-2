@@ -23,7 +23,7 @@ body {
   color: #1f1f1f;
   
   .container {
-    width: 700px;
+    width: 960px;
     margin: 70px auto 0px;
     text-align: center;
     
@@ -75,6 +75,29 @@ body {
         border-radius: 20px;
         margin: auto;
       }
+    }
+  }
+}
+
+.spinners-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  
+  .spinner-block {
+    width: 125px;
+    text-align: center;
+    margin-right: 83px;
+      
+    &:nth-child(5n) {
+      margin-right: 0px;
+    }
+    
+    h2 {
+      margin: 0px 0px 20px 0px;
     }
   }
 }
