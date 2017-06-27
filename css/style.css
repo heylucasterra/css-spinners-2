@@ -76,3 +76,15 @@ body h1 span:before {
 .spinners-container .spinner-block h2 {
   margin: 0px 0px 20px 0px;
 }
+
+/* YOU NEED THESE STYLES */
+/* spinner style */
+.spinner-vol-2 {
+  position: relative;
+  width: 125px;
+  height: 125px;
+}
+.spinner-vol-2:before, .spinner-vol-2:after {
+  content: "";
+  display: block;
+}

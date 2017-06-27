@@ -1,6 +1,7 @@
 //variables
 $bg-color: #fff; //container background-color;
 $accent-font-color: #FD5200; //accent font color;
+$spinner-dimensions: 125px; //width and height of spinner 
 
 //mixins
 
@@ -88,7 +89,7 @@ body {
   margin-top: 70px;
   
   .spinner-block {
-    width: 125px;
+    width: $spinner-dimensions;
     text-align: center;
     margin-right: 83px;
       
@@ -99,5 +100,20 @@ body {
     h2 {
       margin: 0px 0px 20px 0px;
     }
+  }
+}
+
+/* YOU NEED THESE STYLES */
+
+/* spinner style */
+.spinner-vol-2 {
+  position: relative;
+  width: $spinner-dimensions;
+  height: $spinner-dimensions;
+  
+  &:before,
+  &:after {
+    content: "";
+    display: block;
   }
 }
