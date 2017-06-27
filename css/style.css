@@ -3,11 +3,28 @@ body {
   background-color: #fff;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
+  color: #1f1f1f;
 }
 body .container {
   width: 700px;
   margin: 70px auto 0px;
   text-align: center;
+}
+body .container > a {
+  text-decoration: none;
+  color: #1f1f1f;
+  font-size: 20px;
+}
+body .container > a:nth-child(2):after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border: 2px solid #FD5200;
+  border-radius: 20px;
+  margin: 0px 10px 0px 15px;
+  position: relative;
+  top: -2px;
 }
 body h1 {
   font-weight: 400;
