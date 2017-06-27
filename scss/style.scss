@@ -4,10 +4,21 @@ $bg-color: #fff; //container background-color;
 /* COMMON STYLES: YOU DON'T NEED THEM */
 body {
   background-color: $bg-color;
+  font: {
+      family: 'Fira Sans', sans-serif;
+      weight: 400;
+    }
   
   .container {
     width: 700px;
     margin: 70px auto 0px;
     text-align: center;
+  }
+  
+  h1 {
+    font: {
+      weight: 400;
+      size: 35px;
+    }
   }
 }

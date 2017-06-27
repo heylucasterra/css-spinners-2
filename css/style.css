@@ -1,9 +1,15 @@
 /* COMMON STYLES: YOU DON'T NEED THEM */
 body {
   background-color: #fff;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
 }
 body .container {
   width: 700px;
   margin: 70px auto 0px;
   text-align: center;
+}
+body h1 {
+  font-weight: 400;
+  font-size: 35px;
 }
