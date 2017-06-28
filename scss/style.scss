@@ -1,8 +1,9 @@
 //variables
 $bg-color: #fff; //container background-color;
 $accent-font-color: #FD5200; //accent font color;
-$spinner-dimensions: 125px; //width and height of spinner 
+$spinner-dimensions: 125px; //width and height of spinner block 
 $spinner-1-bg: #47A8BD; //spinner-1 background-color
+$spinner-2-bg: #F51AA4; //spinner-2 background-color
 
 //mixins
 
@@ -84,7 +85,7 @@ body {
 .spinners-container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 70px;
@@ -117,93 +118,18 @@ body {
     content: "";
     display: block;
   }
+  
+  .spinner-bar {
+    
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+    }
+  }
 }
 
 /* spinner-1 styles */
 .spinner-vol-2.spinner-vol-2-1 {
-  
-  $element-dimensions: 100px; //spinner elements width and height
-  $big-step: ($spinner-dimensions - $element-dimensions)/2; //top and left offset from spinner borders of bigger element
-  $step: 20px; //difference between big and small elements' sizes
-  $small-step: $big-step + $step/2; //top and left offset of smaller element
-  
-  @keyframes rotate {
-    
-    0% {
-      border-top-color: $spinner-1-bg;
-      border-left-color: $spinner-1-bg;
-      border-bottom-color: $spinner-1-bg;
-      border-right-color: $spinner-1-bg;
-      transform: rotate(0deg);
-    }
-    
-    15% {
-      border-top-color: $spinner-1-bg;
-      border-left-color: $spinner-1-bg;
-      border-bottom-color: $spinner-1-bg;
-      border-right-color: $spinner-1-bg;
-      transform: rotate(0deg);
-    }
-    
-    30% {
-      border-top-color: transparent;
-      border-left-color: $spinner-1-bg;
-      border-bottom-color: $spinner-1-bg;
-      border-right-color: $spinner-1-bg;
-      transform: rotate(90deg);
-    }
-    
-    45% {
-      border-top-color: transparent;
-      border-left-color: $spinner-1-bg;
-      border-bottom-color: $spinner-1-bg;
-      border-right-color: transparent;
-      transform: rotate(180deg);
-    }
-    
-    60% {
-      border-top-color: transparent;
-      border-left-color: $spinner-1-bg;
-      border-bottom-color: transparent;
-      border-right-color: transparent;
-      transform: rotate(270deg);
-    }
-    
-    90% {
-      border-top-color: transparent;
-      border-left-color: transparent;
-      border-bottom-color: transparent;
-      border-right-color: transparent;
-      transform: rotate(360deg);
-    }
-    
-    100% {
-      border-top-color: transparent;
-      border-left-color: transparent;
-      border-bottom-color: transparent;
-      border-right-color: transparent;
-      transform: rotate(360deg);
-    }
-  }
-  
-  &:before {
-    width: $element-dimensions;
-    height: $element-dimensions;
-    border: $element-dimensions/4 solid $spinner-1-bg;
-    border-radius: 150px;
-    @include position-absolute($top: $big-step, $left: $big-step);
-    box-sizing: border-box;
-    transform: rotate(0deg);
-    animation: rotate 1.5s ease-out 0s infinite alternate;
-  }
-  
-  &:after {
-    width: $element-dimensions - $step;
-    height: $element-dimensions - $step;
-    background-color: $spinner-1-bg;
-    border-radius: 150px;
-    @include position-absolute($top: $small-step, $left: $small-step);
-    background-color: $bg-color;
-  }
   
 }
