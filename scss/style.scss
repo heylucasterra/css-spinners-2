@@ -1,7 +1,7 @@
 //variables
 $bg-color: #fff; //container background-color;
 $accent-font-color: #FD5200; //accent font color;
-$spinner-dimensions: 100px; //width and height of spinner block 
+$spinner-dimensions: 80px; //width and height of spinner block 
 $spinner-1-bg: #47A8BD; //spinner-1 background-color
 $spinner-2-bg: #F51AA4; //spinner-2 background-color
 
@@ -132,8 +132,6 @@ body {
 /* spinner-1 styles */
 .spinner-eff.spinner-eff-1 {
   
-  $spinner-effect-dimensions: 80px; //width and height of spinner itself
-  
   @keyframes rotation-top {
     0% {
       transform: rotate(0deg);
@@ -235,29 +233,67 @@ body {
   .bar {
     width: 0;
     height: 0;
-    border:  $spinner-effect-dimensions/2 solid transparent;
+    border:  $spinner-dimensions/2 solid transparent;
     @include position-absolute($top: 0, $left: 0);
     transform: rotate(0deg);
     opacity: 0.5;
     
     &-top {
-      border-top: $spinner-effect-dimensions/2 solid $spinner-1-bg;
+      border-top: $spinner-dimensions/2 solid $spinner-1-bg;
       animation: rotation-top 3.6s linear 0s infinite;
     }
     
     &-right {
-      border-right: $spinner-effect-dimensions/2 solid $spinner-1-bg; 
+      border-right: $spinner-dimensions/2 solid $spinner-1-bg; 
       animation: rotation-right 3.6s linear 0s infinite;
     }
     
     &-bottom {
-      border-bottom: $spinner-effect-dimensions/2 solid $spinner-1-bg; 
+      border-bottom: $spinner-dimensions/2 solid $spinner-1-bg; 
       animation: rotation-bottom 3.6s linear 0s infinite;
     }
     
     &-left {
-      border-left: $spinner-effect-dimensions/2 solid $spinner-1-bg; 
+      border-left: $spinner-dimensions/2 solid $spinner-1-bg; 
       animation: rotation-left 3.6s linear 0s infinite;
+    }
+  }
+}
+
+/* spinner-2 styles */
+.spinner-eff.spinner-eff-2 {
+  $spinner-effect-dimensions: 80px; //width and height of spinner itself
+  $bar-width: 7px; //width of bars
+  
+  width: $spinner-effect-dimensions;
+  height: $spinner-effect-dimensions;
+  margin: auto;
+  
+  .bar {
+    background-color: $spinner-2-bg;
+    
+    &-top {
+      width: 100%;
+      height: $bar-width;
+      @include position-absolute($top: 0, $left: 0);
+    }
+    
+    &-right {
+      width: $bar-width;
+      height: 100%;
+      @include position-absolute($top: 0, $right: 0);
+    }
+    
+    &-bottom {
+      width: 100%;
+      height: $bar-width;
+      @include position-absolute($bottom: 0, $right: 0);
+    }
+    
+    &-left {
+      width: $bar-width;
+      height: 100%;
+      @include position-absolute($bottom: 0, $left: 0);
     }
   }
 }

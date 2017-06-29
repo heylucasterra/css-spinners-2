@@ -66,7 +66,7 @@ body h1 span:before {
   margin-top: 70px;
 }
 .spinners-container .spinner-block {
-  width: 100px;
+  width: 80px;
   text-align: center;
   margin-right: 83px;
 }
@@ -81,8 +81,8 @@ body h1 span:before {
 /* spinner style */
 .spinner-eff {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 .spinner-eff:before, .spinner-eff:after {
   content: "";
@@ -320,4 +320,42 @@ body h1 span:before {
   border-left: 40px solid #47A8BD;
   -webkit-animation: rotation-left 3.6s linear 0s infinite;
           animation: rotation-left 3.6s linear 0s infinite;
+}
+
+/* spinner-2 styles */
+.spinner-eff.spinner-eff-2 {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+.spinner-eff.spinner-eff-2 .bar {
+  background-color: #F51AA4;
+}
+.spinner-eff.spinner-eff-2 .bar-top {
+  width: 100%;
+  height: 7px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.spinner-eff.spinner-eff-2 .bar-right {
+  width: 7px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.spinner-eff.spinner-eff-2 .bar-bottom {
+  width: 100%;
+  height: 7px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.spinner-eff.spinner-eff-2 .bar-left {
+  width: 7px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
