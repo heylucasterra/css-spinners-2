@@ -66,7 +66,7 @@ body h1 span:before {
   margin-top: 70px;
 }
 .spinners-container .spinner-block {
-  width: 80px;
+  width: 50px;
   text-align: center;
   margin-right: 83px;
 }
@@ -81,8 +81,8 @@ body h1 span:before {
 /* spinner style */
 .spinner-eff {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
 }
 .spinner-eff:before, .spinner-eff:after {
   content: "";
@@ -293,7 +293,7 @@ body h1 span:before {
 .spinner-eff.spinner-eff-1 .bar {
   width: 0;
   height: 0;
-  border: 40px solid transparent;
+  border: 25px solid transparent;
   position: absolute;
   top: 0;
   left: 0;
@@ -302,31 +302,258 @@ body h1 span:before {
   opacity: 0.5;
 }
 .spinner-eff.spinner-eff-1 .bar-top {
-  border-top: 40px solid #47A8BD;
+  border-top: 25px solid #47A8BD;
   -webkit-animation: rotation-top 3.6s linear 0s infinite;
           animation: rotation-top 3.6s linear 0s infinite;
 }
 .spinner-eff.spinner-eff-1 .bar-right {
-  border-right: 40px solid #47A8BD;
+  border-right: 25px solid #47A8BD;
   -webkit-animation: rotation-right 3.6s linear 0s infinite;
           animation: rotation-right 3.6s linear 0s infinite;
 }
 .spinner-eff.spinner-eff-1 .bar-bottom {
-  border-bottom: 40px solid #47A8BD;
+  border-bottom: 25px solid #47A8BD;
   -webkit-animation: rotation-bottom 3.6s linear 0s infinite;
           animation: rotation-bottom 3.6s linear 0s infinite;
 }
 .spinner-eff.spinner-eff-1 .bar-left {
-  border-left: 40px solid #47A8BD;
+  border-left: 25px solid #47A8BD;
   -webkit-animation: rotation-left 3.6s linear 0s infinite;
           animation: rotation-left 3.6s linear 0s infinite;
 }
 
 /* spinner-2 styles */
 .spinner-eff.spinner-eff-2 {
-  width: 80px;
-  height: 80px;
-  margin: auto;
+  -webkit-animation: rotation 12.8s steps(1) 0s infinite;
+          animation: rotation 12.8s steps(1) 0s infinite;
+}
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes bar-top {
+  0% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+  12.5% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  87.5% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+}
+@keyframes bar-top {
+  0% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+  12.5% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  87.5% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+}
+@-webkit-keyframes bar-right {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  12.5% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  25% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  75% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  87.5% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+}
+@keyframes bar-right {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  12.5% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  25% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  75% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  87.5% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+}
+@-webkit-keyframes bar-bottom {
+  0% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+  25% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+  37.5% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  62.5% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  75% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+  100% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+}
+@keyframes bar-bottom {
+  0% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+  25% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+  37.5% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  62.5% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  75% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+  100% {
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+  }
+}
+@-webkit-keyframes bar-left {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  37.5% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  62.5% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+}
+@keyframes bar-left {
+  0% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  37.5% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  62.5% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+  }
 }
 .spinner-eff.spinner-eff-2 .bar {
   background-color: #F51AA4;
@@ -337,6 +564,12 @@ body h1 span:before {
   position: absolute;
   top: 0;
   left: 0;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-animation: bar-top 3.2s linear 0s infinite;
+          animation: bar-top 3.2s linear 0s infinite;
 }
 .spinner-eff.spinner-eff-2 .bar-right {
   width: 7px;
@@ -344,6 +577,12 @@ body h1 span:before {
   position: absolute;
   top: 0;
   right: 0;
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-animation: bar-right 3.2s linear 0s infinite;
+          animation: bar-right 3.2s linear 0s infinite;
 }
 .spinner-eff.spinner-eff-2 .bar-bottom {
   width: 100%;
@@ -351,6 +590,12 @@ body h1 span:before {
   position: absolute;
   right: 0;
   bottom: 0;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-animation: bar-bottom 3.2s linear 0s infinite;
+          animation: bar-bottom 3.2s linear 0s infinite;
 }
 .spinner-eff.spinner-eff-2 .bar-left {
   width: 7px;
@@ -358,4 +603,10 @@ body h1 span:before {
   position: absolute;
   left: 0;
   bottom: 0;
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-animation: bar-left 3.2s linear 0s infinite;
+          animation: bar-left 3.2s linear 0s infinite;
 }
